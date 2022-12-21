@@ -6,6 +6,8 @@ public class Main {
     public static void main(String[] args)
     {
         arrays obj=new arrays();
-        obj.matrix();
+        obj.linearSearch();
+        // linearSearch ls=new linearSearch();
+        // ls.search();
     }
 }

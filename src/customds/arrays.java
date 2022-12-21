@@ -3,21 +3,25 @@ package customds;
 import java.util.Scanner;
 
 public class arrays {
-    public void array(){
+    public int[] array(){
         Scanner sc= new Scanner(System.in);
         // datatype[] var_name = new datatype[size];
         // datatype homogenous
-        int arr1[]=new int[4];
-        for(int i=0;i<arr1.length;i++){
+        System.out.println("Enter the size of array: ");
+        int s=sc.nextInt();
+        int arr1[]=new int[s];
+        for(int i=0;i<s;i++){
             System.out.println("Enter number "+ i);
             arr1[i]=sc.nextInt();
         }
         System.out.println("");
 
-        for(int i=0;i<4;i++)
-        System.out.println(arr1[i]);
+        // for(int i=0;i<s;i++)
+        // System.out.println(arr1[i]);
+        
+        
+        return arr1;
 
-        sc.close();
     }
 
     public void matrix(){
@@ -44,4 +48,29 @@ public class arrays {
         sc.close();
 
     }
+
+    public void linearSearch() {
+
+        //O(1) : Best case Time Complexity
+        //O(n) : Worst case time complexity
+
+        Scanner sc=new Scanner(System.in);
+
+        int[] arr=array();
+        System.out.println("Enter the number to be searched: ");
+        int a=sc.nextInt();
+        int i;
+        for(i=0; i<arr.length; i++){
+            if(arr[i]==a)
+            break;
+        }
+
+        if(i<arr.length)
+        System.out.println("The position for "+a+" is "+i);
+
+        else
+        System.out.println(a+" doesnt exist in the array");
+        sc.close();
+    }
 }
+
